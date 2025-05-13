@@ -95,6 +95,7 @@ export default function AboutPage() {
           transition={{ delay: 0.8, duration: 0.5 }}
           className="w-full space-y-8"
         >
+
           <div className="bg-card rounded-xl p-8 shadow-lg">
             <h2 className="text-2xl font-semibold mb-4">My Journey</h2>
             <div className="space-y-6">
@@ -137,10 +138,15 @@ export default function AboutPage() {
               </Button>
             </a>
           </motion.div>
+
         </motion.div>
+
       </motion.div>
+
     </div>
+
   )
+
 }
 
 const socialLinks = [

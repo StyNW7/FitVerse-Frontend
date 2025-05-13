@@ -57,3 +57,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+  background: #9333EA;
+  border-radius: 10px;
+}

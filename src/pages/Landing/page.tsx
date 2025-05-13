@@ -40,7 +40,7 @@ export default function LandingPage() {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="text-4xl md:text-6xl font-bold tracking-tight"
         >
-          Vite + TailwindCSS v3 + ShadcnUI v0.8
+          Vite v4 + TailwindCSS v3 + ShadcnUI v0.8
         </motion.h1>
 
         <motion.p
@@ -58,10 +58,12 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <Button size="lg" className="rounded-full">
-            Get Started
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <a href="https://github.com/StyNW7/Vite-React-TypeScript-ShadcnUI-Template" target="_blank">
+            <Button size="lg" className="rounded-full">
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </a>
         </motion.div>
       </motion.div>
 
