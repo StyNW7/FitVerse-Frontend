@@ -30,7 +30,7 @@ export default function AboutPage() {
           <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 opacity-75 blur-xl" />
           <div className="relative rounded-full overflow-hidden border-4 border-background">
             <img
-              src="/Images/logo.png"
+              src="/Images/stanley.png"
               alt="Profile"
               width={200}
               height={200}

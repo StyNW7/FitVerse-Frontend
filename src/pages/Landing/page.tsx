@@ -40,7 +40,7 @@ export default function LandingPage() {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="text-4xl md:text-6xl font-bold tracking-tight"
         >
-          Vite v4 + TailwindCSS v3 + ShadcnUI v0.8
+          Vite v6 + TailwindCSS v3 + ShadcnUI v0.8
         </motion.h1>
 
         <motion.p
@@ -131,7 +131,7 @@ const features = [
   },
   {
     title: "Modern Stack",
-    description: "Built with Vite React.js, Tailwind CSS v3, ShadcnUI v0.8, and Framer Motion for the best developer experience.",
+    description: "Built with Vite React.js v18, Tailwind CSS v3, ShadcnUI v0.8, and Framer Motion for the best developer experience.",
     icon: <Code className="h-6 w-6 text-primary" />,
   },
   {

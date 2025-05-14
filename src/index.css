@@ -58,11 +58,15 @@
   }
 }
 
+/* Reset HTML */
+
 * {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
 }
+
+/* Scrollbar Design */
 
 ::-webkit-scrollbar{
   width: 10px;

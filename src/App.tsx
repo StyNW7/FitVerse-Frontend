@@ -7,9 +7,11 @@ import { useState } from "react";
 import { Toaster } from "react-hot-toast";
 
 // Layout
+
 import Layout from "@/layouts/root-layout";
 
 // Utility Pages / Components
+
 import ScrollToTop from "./utility/ScrollToTop";
 import CustomCursor from "./utility/CustomCursor";
 import ScrollToTopFunction from "./utility/ScrollToTopFunction";
