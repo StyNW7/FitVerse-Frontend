@@ -37,7 +37,7 @@
 ## 📚 Complete Documentation
 
 - **Notion Documentation** (Detailed Documentation for the template)
-  - [Notion Documentation](https://your-notion-link.com)
+  - [Notion Documentation](https://stanley-n-wijaya.notion.site/Vite-Template-1f373555b71f80fc9409fec8fffd8473?pvs=4)
 
 ---
 
@@ -93,9 +93,9 @@ By using this template, you'll be able to save time on configuration and focus m
 ---
 
 ## 🚀 Live Demo
-Visit the deployed application here (frontend only):
+Visit the deployed application here:
 <br>
-👉 [https://moorgan.vercel.app](https://moorgan.vercel.app)
+👉 [https://vite-template-eta.vercel.app/](https://vite-template-eta.vercel.app/)
 
 ---
 
@@ -151,7 +151,7 @@ Visit the deployed application here (frontend only):
 
 *Structure*
 <p align="center">
-  <img src="./Images/screenshots/dashboard-overview.png"  width="700">
+  <img src="./Images/screenshots/file-structure.png"  width="700">
 </p>
 
 ---
