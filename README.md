@@ -28,7 +28,6 @@
 - [Core Features](#🧩-core-features)
 - [Getting Started Locally](#🧰-getting-started-locally)
 - [Screenshots](#🖼️-screenshots)
-- [Configuration](#⚙️-configuration)
 - [Team](#👥-team)
 - [Contact](#📬-contact)
 
@@ -53,9 +52,9 @@ By using this template, you'll be able to save time on configuration and focus m
 - **Frontend**: 
   - **React v18**: A declarative, efficient, and flexible JavaScript library for building user interfaces.
   - **TailwindCSS v3**: A utility-first CSS framework for creating fast, responsive web designs.
-  - **TypeScript v6**: A statically typed superset of JavaScript that enhances code quality and reduces bugs.
+  - **TypeScript v5**: A statically typed superset of JavaScript that enhances code quality and reduces bugs.
   - **ShadcnUI v0.8**: A UI component library for building beautiful, customizable, and accessible UI elements.
-  - **Framer Motion**: A library for animations in React to create smooth, interactive transitions.
+  - **Framer Motion v12**: A library for animations in React to create smooth, interactive transitions.
   - **Radix UI**: A set of low-level UI primitives to build accessible, high-quality React components (e.g., modals, dropdowns, etc.).
   - **Lucide React**: A collection of simple, customizable icons for React apps.
 
