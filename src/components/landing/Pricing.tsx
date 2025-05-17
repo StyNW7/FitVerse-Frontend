@@ -1,11 +1,21 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { Check, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 
-const plans = [
+type Plan = {
+  name: string;
+  price: {
+    monthly: string;
+    yearly: string;
+  };
+  description: string;
+  features: string[];
+  limitations: string[];
+  popular?: boolean;
+};
+
+const plans: Plan[] = [
   {
     name: "Basic",
     price: { monthly: "$9.99", yearly: "$99" },
@@ -51,9 +61,12 @@ const plans = [
     ],
     limitations: [],
   },
-]
+];
+
+// const billingCycle: "monthly" | "yearly" = "monthly";
 
 export default function Pricing() {
+
   const [billingCycle, setBillingCycle] = useState("monthly")
 
   return (
@@ -114,7 +127,7 @@ export default function Pricing() {
                 <p className="text-muted-foreground mb-4">{plan.description}</p>
 
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">{plan.price[billingCycle]}</span>
+                  <span className="text-4xl font-bold">{billingCycle === "monthly" ? plan.price.monthly : plan.price.yearly}</span>
                   <span className="text-muted-foreground">/{billingCycle === "monthly" ? "month" : "year"}</span>
                 </div>
 
