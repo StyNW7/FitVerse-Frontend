@@ -12,6 +12,7 @@ import Layout from "@/layouts/root-layout";
 
 // Utility Pages / Components
 
+import MouseMoveEffect from "./components/utility/MouseMoveEffect";
 import ScrollToTop from "./utility/ScrollToTop";
 import CustomCursor from "./utility/CustomCursor";
 import ScrollToTopFunction from "./utility/ScrollToTopFunction";
@@ -32,9 +33,11 @@ function App() {
     // Providers, Router, Scroll to Top Function and Button, and Custom Cursor
 
     <BrowserRouter>
+
       <ScrollToTopFunction />
       <ScrollToTop />
       <CustomCursor />
+      {/* <MouseMoveEffect/> */}
 
       {loading && (
         <LoadingScreen onComplete={() => setLoading(false)} />

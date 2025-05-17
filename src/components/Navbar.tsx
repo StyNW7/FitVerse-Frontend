@@ -1,118 +1,114 @@
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ModeToggle from "@/components/theme-toggle"
-
-import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react"
+import { Menu, X } from "lucide-react"
 
 export default function Navbar() {
-
-  const [isOpen, setIsOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
-  const location = useLocation();
-  const pathname = location.pathname;
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  useEffect(() => {
-    if (isOpen) setIsOpen(false)
-  }, [pathname])
-
-  if (!mounted) return null
-
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border/40" : "bg-transparent"
+      }`}
+    >
       <div className="container flex h-16 items-center justify-between">
         <a href="/" className="flex items-center space-x-2">
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="font-bold text-xl"
-          >
-            NW
-          </motion.div>
+          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            FitVerse
+          </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item, index) => (
-            <motion.div
-              key={item.href}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-            >
-              <a
-                href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  pathname === item.href ? "text-foreground" : "text-muted-foreground"
-                }`}
-              >
-                {item.label}
-                {pathname === item.href && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className="h-0.5 bg-primary mt-1"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-              </a>
-            </motion.div>
-          ))}
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-6">
+          <a href="#features" className="text-sm font-medium transition-colors hover:text-primary">
+            Features
+          </a>
+          <a href="#how-it-works" className="text-sm font-medium transition-colors hover:text-primary">
+            How It Works
+          </a>
+          <a href="#testimonials" className="text-sm font-medium transition-colors hover:text-primary">
+            Testimonials
+          </a>
+          <a href="#pricing" className="text-sm font-medium transition-colors hover:text-primary">
+            Pricing
+          </a>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center space-x-4">
           <ModeToggle />
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-            <Menu className="h-5 w-5" />
-            <span className="sr-only">Toggle menu</span>
+          <Button variant="ghost" size="sm" className="hidden md:inline-flex">
+            Log In
+          </Button>
+          <Button size="sm" className="hidden md:inline-flex bg-primary hover:bg-primary/90">
+            Start Free Trial
+          </Button>
+
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden border-b"
-        >
-          <div className="container py-4">
-            <nav className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    pathname === item.href ? "text-foreground" : "text-muted-foreground"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden border-t border-border/40">
+          <div className="container py-4 space-y-4">
+            <a
+              href="#features"
+              className="block py-2 text-sm font-medium transition-colors hover:text-primary"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Features
+            </a>
+            <a
+              href="#how-it-works"
+              className="block py-2 text-sm font-medium transition-colors hover:text-primary"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              How It Works
+            </a>
+            <a
+              href="#testimonials"
+              className="block py-2 text-sm font-medium transition-colors hover:text-primary"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Testimonials
+            </a>
+            <a
+              href="#pricing"
+              className="block py-2 text-sm font-medium transition-colors hover:text-primary"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Pricing
+            </a>
+            <div className="pt-4 flex flex-col space-y-3">
+              <Button variant="outline" size="sm">
+                Log In
+              </Button>
+              <Button size="sm" className="bg-primary hover:bg-primary/90">
+                Start Free Trial
+              </Button>
+            </div>
           </div>
-        </motion.div>
+        </div>
       )}
     </header>
   )
 }
-
-const navItems = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "About",
-    href: "/about",
-  },
-]
