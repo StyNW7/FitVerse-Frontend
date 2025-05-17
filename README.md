@@ -30,11 +30,11 @@
 
 <ul>
     <li><b>Notion Documentation (Detail Documentation)</b></li>
-    <a href="https://stanley-n-wijaya.notion.site/FitVerse-Documentation-1df73555b71f80fd9fd9dbfc655ce5a7?pvs=4">Notion Documentation</a>
+    <a href="https://stanley-n-wijaya.notion.site/Samsung-SFT-FitVerse-1e573555b71f80128210c9c9368b88cd?pvs=4">Notion Documentation</a>
     <!-- <li><b>Demo Video</b></li>
     <a href="">Link Demo Video</a> -->
     <li><b>FitVerse Google Drive</b></li>
-    <a href="https://drive.google.com/drive/folders/1Slexo254LAhwieCQazA-peBe4Vl8fZJ5?usp=sharing">FitVerse Documents (Google Drive)</a>
+    <a href="https://drive.google.com/drive/folders/1X-_GhHFng24r2l3P4YQnEIo4gUuDzFo7?usp=sharing">FitVerse Documents (Google Drive)</a>
 </ul>
 
 ---
