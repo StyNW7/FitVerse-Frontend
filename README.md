@@ -108,7 +108,7 @@
 ## 🚀 Live Demo
 Visit the deployed application here (frontend only):
 <br>
-👉 [https://FitVerse.vercel.app/](https://FitVerse.vercel.app/)
+👉 [https://fitverse-sft.vercel.app/](https://fitverse-sft.vercel.app/)
 
 ---
 
