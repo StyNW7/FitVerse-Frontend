@@ -12,7 +12,7 @@ import Layout from "@/layouts/root-layout";
 
 // Utility Pages / Components
 
-import MouseMoveEffect from "./components/utility/MouseMoveEffect";
+// import MouseMoveEffect from "./components/utility/MouseMoveEffect";
 import ScrollToTop from "./utility/ScrollToTop";
 import CustomCursor from "./utility/CustomCursor";
 import ScrollToTopFunction from "./utility/ScrollToTopFunction";
