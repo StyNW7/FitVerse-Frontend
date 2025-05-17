@@ -1,7 +1,7 @@
 <h1 align="center"> FitVerse - Frontend </h1> <br>
 <p align="center">
   <a href="">
-    <img alt="FitVerse" title="FitVerse" src="public/images/logo.png" width="360px">
+    <img alt="FitVerse" title="FitVerse" src="public/Images/logo.png" width="360px">
   </a>
 </p>
 
